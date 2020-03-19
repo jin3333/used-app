@@ -1,0 +1,142 @@
+.my_main {
+width: 100%;
+.header{
+  background-color: blue;
+  width: 100vw;
+  height: 70px;
+  z-index: 2;
+  border-bottom: solid;
+  position: fixed;
+  top: 0;
+  left: 0;
+  &_contents {
+    background-color: red;
+    width: 1300px;
+    height: 70px;
+    display: flex;
+    margin: 0 auto 0 auto;
+    line-height: 70px;
+    position: relative;
+    border-bottom: solid;
+
+    &_btn_app_name {
+      display: block;
+      font-size: 50px;
+      color: black;
+      font-family: 'Sacramento', cursive;
+      font-weight: bold;
+      position: absolute;
+      left: 550px;
+      padding-top: 10px;
+   }
+    &_btn_login_user {
+      padding-left: 5px;
+      color: gray;
+      float: right;
+      position: absolute;
+      right:100px;
+    }
+    &_btn_new_user {
+      padding-left: 20px;
+      position: absolute;
+      right: 50px;
+      color: gray;
+    }
+    .input_box {
+     width: 300px;
+     height: 30px;
+     background-color: yellowgreen;
+     position: fixed;
+     top: 20px;
+    
+    }
+  }
+} 
+&_title {
+  height: 360px;
+  padding-top: 70px;
+  background-color: burlywood;
+  position: relative;
+  .user_header {
+    height: 290px;
+    width: 990px;
+    margin: 0 auto 0 auto;
+    background-color: fuchsia;
+    position: relative;
+    .user_sub {
+      height: 250px;
+      width: 150px;
+      background-color: green;
+      margin-left: 20px;
+     position: absolute;
+     top: 20px;
+     .user_imag {
+       height: 150px;
+       width: 150px;
+       background-color: khaki;
+       padding-top: 10px;
+     }
+     .user_edit_btn {
+       height: 32px;
+       width: 134px;
+       background-color: lightcoral;
+       margin: 18px auto 0 auto;
+     }
+    }
+    .user_main {
+      width: 750px;
+      height: 200px;
+      background-color: lightskyblue;
+      position: absolute;
+      left:200px;
+      top: 50px;
+      .user_name {
+        width: 750px;
+        height: 90px;
+        background-color: lime;
+        font-size: 40px;
+        font-weight: bold;
+      }
+      .user_profle{
+        width: 750px;
+        height: 100px;
+        background-color: mediumorchid;
+      }
+    }
+  }
+}
+  .main_content {
+    height: 100vh;
+    background-color: navajowhite;
+    .main_content_box {
+      width: 990px;
+      height: 100%;
+      margin: 0 auto 0 auto;
+      background-color: olive;
+      .main_content_box_post {
+        width: 330px;
+        height: 55px;
+        margin: 20px auto 0 auto;
+        background-color: paleturquoise;
+        font-size: 20px;
+        line-height: 55px;
+        text-align:center;
+      }
+      .main_content_box_list{
+        height: 100%;
+        background-color: pink;
+ 
+      .user_contens {
+        padding-top: 50px;
+        margin: 30px;
+        float: left;
+        list-style: none;
+      }
+      .imag {
+        margin-left: 50px;
+        margin-bottom: 20px;
+      }
+    }
+    }
+  }
+}

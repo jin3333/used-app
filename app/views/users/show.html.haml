@@ -1,0 +1,32 @@
+.my_main
+  .header
+    .header_contents
+      .input_box
+      .header_contents_btn_seach_form
+        
+      .header_contents_btn_app_name
+        USED 
+      .header_contents_btn_rigt_btn
+        - if user_signed_in?
+          = link_to "ログアウト", destroy_user_session_path, method: :delete, class: "header_contents_btn_login_user" 
+          = link_to current_user.name, user_path(current_user), class: "header_contents_btn_new_user"
+  .my_main_title
+    .user_header
+      .user_sub
+        .user_imag
+        .user_edit_btn
+          = link_to "プロフィール変更", edit_user_path(current_user)  
+      .user_main
+        .user_name
+          jin
+        .user_profle
+          よろしくお願いします
+  .main_content
+    .main_content_box
+      .main_content_box_post
+        = link_to "コーディネート投稿", new_post_path, class:"main_content_box_post"
+      .main_content_box_list
+        .user_contens
+          - @posts.each do |post|
+            = image_tag post.image, size: '260x350' 
+          

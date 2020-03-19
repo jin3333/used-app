@@ -1,0 +1,15 @@
+.post
+  = form_for(@post,local: true) do |f|
+    .field
+      .field-label
+        = f.label :"画像"
+      .field-input
+        = f.file_field :image
+    .field
+      .field-label
+        = f.label :"コーディネート詳細"
+      .field-input
+        = f.text_area :text
+        
+      .actions
+      = f.submit "投稿する", class: 'btn'
