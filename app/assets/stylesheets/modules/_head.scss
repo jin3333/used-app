@@ -1,0 +1,64 @@
+.header{
+  background-color: blue;
+  width: 100vw;
+  height: 70px;
+  z-index: 2;
+  position: fixed;
+  border-bottom: solid;
+  top: 0;
+  left: 0;
+  &_contents {
+    background-color: red;
+    width: 1080px;
+    height: 70px;
+    display: flex;
+    margin: 0 auto 0 auto;
+    line-height: 70px;
+    position: relative;
+    border-bottom: solid;
+
+    &_btn_app_name {
+      display: block;
+      font-size: 50px;
+      color:black;
+      font-family: 'Sacramento', cursive;
+      font-weight: bold;
+      position: absolute;
+      left: 550px;
+      padding-top: 10px;
+   }
+    &_btn_login_user {
+      padding-left: 5px;
+      color: gray;
+      float: right;
+      position: absolute;
+      right:100px;
+    }
+    &_btn_new_user {
+      padding-left: 20px;
+      position: absolute;
+      right: 1px;
+      color: gray;
+    }
+    &_btn_now_user {
+      padding-left: 20px;
+      position: absolute;
+      right: 30px;
+      color: gray;
+    }
+    .header_contents_btn_seach_form {
+     width: 300px;
+     height: 30px;
+     background-color: yellowgreen;
+     position: fixed;
+     top: 20px;
+     position: absolute;
+     .text {
+       width: 300px;
+       position: relative;
+       bottom: 20px;
+     }
+    }
+    
+  }
+} 

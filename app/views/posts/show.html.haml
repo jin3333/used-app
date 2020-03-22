@@ -1,0 +1,12 @@
+.content
+  .header
+    = render partial: "header"
+  .user_header
+    = @post.user.name
+  .content_info
+    .content_info_user_post
+      .content_info_user_post_image
+        = image_tag @post.image
+      .content_info_user_post_text
+        = @post.text
+      .content_info_user_post_item
