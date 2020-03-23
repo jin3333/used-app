@@ -1,0 +1,22 @@
+.post
+  = form_for(@item,local: true) do |f|
+    .field
+      .field-label
+        = f.label :"服の種類"
+      .field-input
+        = f.text_field :name, placeholder: "例）Tシャツ"
+    
+    .field
+      .field-label
+        = f.label :"価格"
+      .field-input
+        = f.text_field :price
+
+    .field
+      .field-label
+        = f.label :"画像"
+      .field-input
+        = f.file_field :image
+   
+    .actions
+      = f.submit "出品する", class: 'btn'

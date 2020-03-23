@@ -3,7 +3,7 @@
     = link_to post_path(post.id) do
       = image_tag post.image 
     .main_contents_user_info
-      .main_contents_user_folow
-        = render "relationships/follow_button", user: @user
       .main_contents_user_name
         = link_to post.user.name, user_path(post.user.id)
+      .main_contents_folow
+        = render "relationships/follow_button", user: @user
