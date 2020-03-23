@@ -26,6 +26,7 @@
       position: absolute;
       left: 550px;
       padding-top: 10px;
+      text-decoration: none;
    }
     &_btn_login_user {
       padding-left: 5px;
@@ -33,18 +34,21 @@
       float: right;
       position: absolute;
       right:100px;
+      text-decoration: none;
     }
     &_btn_new_user {
       padding-left: 20px;
       position: absolute;
       right: 1px;
       color: gray;
+      text-decoration: none;
     }
     &_btn_now_user {
       padding-left: 20px;
       position: absolute;
       right: 30px;
       color: gray;
+      text-decoration: none;
     }
     .header_contents_btn_seach_form {
      width: 300px;

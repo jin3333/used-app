@@ -61,3 +61,5 @@ gem 'devise'
 gem 'carrierwave', '~> 1.3', '>= 1.3.1'
 
 gem 'mini_magick'
+
+gem 'kaminari'

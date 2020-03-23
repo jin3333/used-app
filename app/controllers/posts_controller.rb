@@ -12,7 +12,7 @@ class PostsController < ApplicationController
 
   def index
     @posts = Post.all
-    @posts = Post.includes(:user)
+    @posts = Post.includes(:user).order("created_at DESC").page(params[:page]).per(9)
   end
 
   def show
