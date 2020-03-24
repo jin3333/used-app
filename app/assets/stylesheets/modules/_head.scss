@@ -63,6 +63,9 @@
      position: fixed;
      top: 20px;
      position: absolute;
+     .header_contents_btn_seach_form form {
+       height: 40px;
+     }
      .text {
        width: 300px;
        position: relative;

@@ -5,19 +5,23 @@
     .user_header
       .user_sub
         .user_imag
+          
         .user_edit_btn
-          - if current_user.id?
+          - if current_user == @user
             = link_to "プロフィール変更", edit_user_path(current_user) 
           - else 
-            folow 
+            = render "relationships/follow_button", user: @user 
       .user_main
         .user_name
           = @name 
         .user_profle
-          よろしくお願いします
+          = simple_format(@introduce)
   .main_content
     .main_content_box
       .main_content_box_post
-        = link_to "コーディネート投稿", new_post_path, class:"main_content_box_post"
+        - if current_user == @user
+          = link_to "コーディネート投稿", new_post_path, class:"main_content_box_post"
+        - else 
+          = "ユーザー投稿一覧"
       .main_content_box_list
         = render @posts

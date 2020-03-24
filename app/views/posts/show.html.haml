@@ -2,11 +2,22 @@
   .header
     = render partial: "header"
   .user_header
-    = @post.user.name
+    .user_header_name
+      = @post.user.name
+    - if user_signed_in? && current_user.id == @post.user_id
+      .user_post_edit
+        = link_to edit_post_path(@post.id), method: :get do
+          = icon('fa', 'edit', class: "user_name__btn--icon")
+      .user_post_delet
+        = link_to "/posts/#{@post.id}", method: :delete do
+          = icon('fa', 'trash-alt' , class: "user_name__btn--icon")
   .content_info
     .content_info_user_post
       .content_info_user_post_image
         = image_tag @post.image
       .content_info_user_post_text
-        = @post.text
+        .format
+          %a コメント
+        .content_info_user_post_text_comment
+          = simple_format(@text)
       .content_info_user_post_item

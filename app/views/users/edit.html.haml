@@ -20,7 +20,17 @@
           .field-label
             = f.label :"自己紹介"
           .field-input
-            = f.text_field :introduce
+            = f.text_area :introduce, size: "45x5"
+        
+        .field
+          .field-label
+            = f.label :age, '年齢', class:'control-label'
+            = f.select :age, [["",""], ["10代","10"], ["20代","20"], ["30代","30"], ["40代","40"], ["50代","50"], ["60代","60"], ["70代以上","70"] ], {},   class: 'form-control'
+
+        .field
+          .field-label
+            = f.label :"sex"
+            = f.select :sex, [["",""], ["女性","女性"], ["男性","男性"]], {},   class: 'form-control'
             
         .actions
           = f.submit "Update", class: 'btn'

@@ -17,10 +17,23 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find_by(id: params[:id])
+    @text = @post.text
   end
   
   def search
     @posts = Post.search(params[:keyword])
+  end
+
+  def edit
+    @post = Post.find_by(id: params[:id])
+  end
+
+  def update
+  end
+
+  def destroy
+    post = Post.find(params[:id])
+    post.destroy
   end
 
   private
