@@ -12,7 +12,10 @@ class PostsController < ApplicationController
 
   def index
     @posts = Post.all
-    @posts = Post.includes(:user).order("created_at DESC").page(params[:page]).per(9)
+    @posts = Post.includes(:user).order("created_at DESC").page(params[:page]).per(12)
+    if params[:tag_name]
+      @posts = Post.tagged_with("#{params[:tag_name]}")
+    end
   end
 
   def show
@@ -21,7 +24,7 @@ class PostsController < ApplicationController
   end
   
   def search
-    @posts = Post.search(params[:keyword])
+    @posts = Post.search(params[:keyword]).order("created_at DESC").page(params[:page]).per(12)
   end
 
   def edit
@@ -39,6 +42,6 @@ class PostsController < ApplicationController
   private
 
  def post_params
-  params.require(:post).permit(:text, :image).merge(user_id: current_user.id)
+  params.require(:post).permit(:text, :image, :tag_list).merge(user_id: current_user.id )
  end
 end

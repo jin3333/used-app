@@ -20,4 +20,6 @@
           %a コメント
         .content_info_user_post_text_comment
           = simple_format(@text)
-      .content_info_user_post_item
+          .content_info_user_post_tag
+            - @post.tag_list.each do |tag|
+              %span{class: "content_info_user_post_tags"}= tag

@@ -68,5 +68,15 @@
     border: 10px solid rgba(0,0,0,0.3);
     border-width:thick ;
   }
+  &_tag {
+    position: absolute;
+    bottom: 50px;
+    .content_info_user_post_tags {
+      background: skyblue;
+      display: inline-block;
+      color: black;
+      margin-top: 10px;
+    }
+  }
 }
 

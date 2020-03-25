@@ -63,3 +63,7 @@ gem 'carrierwave', '~> 1.3', '>= 1.3.1'
 gem 'mini_magick'
 
 gem 'kaminari'
+
+gem 'rmagick'
+
+gem 'acts-as-taggable-on', '~> 6.0'
