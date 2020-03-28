@@ -16,11 +16,15 @@ class PostsController < ApplicationController
     if params[:tag_name]
       @posts = Post.tagged_with("#{params[:tag_name]}")
     end
-  end
+    # @users = user.select ("url")
+    end
 
   def show
     @post = Post.find_by(id: params[:id])
     @text = @post.text
+    @comment = Comment.new
+    @comments = @post.comments.includes(:user).order("created_at DESC")
+    @like = Like.new
   end
   
   def search

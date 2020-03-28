@@ -2,6 +2,9 @@
   .header
     = render partial: "header"
   .user_header
+    .user_imag
+      = link_to user_path(@post.user.id) do
+        = image_tag @post.user.image_name, :size =>'70x70'
     .user_header_name
       = @post.user.name
     - if user_signed_in? && current_user.id == @post.user_id
@@ -11,15 +14,38 @@
       .user_post_delet
         = link_to "/posts/#{@post.id}", method: :delete do
           = icon('fa', 'trash-alt' , class: "user_name__btn--icon")
+    .item-button-container
+      .item-button-container__left
+        = render partial: "likes/like", locals: { post: @post, posts: @posts, likes: @likes, like: @like}
   .content_info
     .content_info_user_post
-      .content_info_user_post_image
-        = image_tag @post.image
-      .content_info_user_post_text
-        .format
-          %a コメント
-        .content_info_user_post_text_comment
-          = simple_format(@text)
-          .content_info_user_post_tag
-            - @post.tag_list.each do |tag|
-              %span{class: "content_info_user_post_tags"}= tag
+      .content_info_user_post_content
+        .content_info_user_post_image
+          = image_tag @post.image
+        .content_info_user_post_text
+          .format
+            %a コーディネートの内容
+          .content_info_user_post_text_comment
+            = simple_format(@text)
+            .content_info_user_post_tag
+              - @post.tag_list.each do |tag|
+                %span{class: "content_info_user_post_tags"}= tag
+      .comment_fild
+        .content_info_user_post_comment_fild
+          -if current_user
+            = form_for [@post, @comment] do |f|
+              .field
+                .field-label 
+                .field-input
+                  = f.text_area :text,size: "100x5", placeholder: "コメントする"
+                .actions
+                  = f.submit "コメントする", class: 'btn'
+        .content_info_user_post_comment_list
+          <コメント一覧>
+        .comment_box
+          - @comments.each do |comment|
+            .comments_user_name
+              = link_to comment.user.name, user_path(comment.user_id)
+                
+            .comment_title
+              = comment.text

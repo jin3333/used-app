@@ -7,13 +7,18 @@ class User < ApplicationRecord
   validates :name, presence: true, uniqueness: true  
   
   has_many :posts
+  has_many :comments
+  has_many :likes, dependent: :destroy
+  def already_liked?(post)
+    self.likes.exists?(post_id: post.id)
+  end
 
   has_many :relationships
   has_many :followings, through: :relationships, source: :follow
   has_many :reverse_of_relationships, class_name: 'Relationship', foreign_key: 'follow_id'
   has_many :followers, through: :reverse_of_relationships, source: :user
 
-  mount_uploader :image, ImageUploader
+  mount_uploader :image_name, ImageUploader
 
 
   def follow(other_user)

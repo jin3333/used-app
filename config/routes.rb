@@ -4,10 +4,11 @@ Rails.application.routes.draw do
   devise_for :users
   resources :users, only: [:index,:edit, :update, :show, :new, :create]
   resources :posts, only: [:index,:new,:edit, :update,:create,:show,:destroy] do
-  collection do
+    resources :likes, only: [:create, :destroy]
+    resources :comments, only: [:create]
+     collection do
     get 'search'
   end
 end
   resources :relationships, only: [:create, :destroy]
-  resources :items, only:[:new, :create]
 end

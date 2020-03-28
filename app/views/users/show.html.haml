@@ -5,7 +5,7 @@
     .user_header
       .user_sub
         .user_imag
-         
+          = image_tag @user.image_name, :size =>'150x150'
         .user_edit_btn
           - if current_user == @user
             = link_to "プロフィール変更", edit_user_path(current_user) 
@@ -16,6 +16,8 @@
           = @name 
         .user_profle
           = simple_format(@introduce)
+        .user_url
+          -# = link_to @users[:id][:url]
   .main_content
     .main_content_box
       .main_content_box_post

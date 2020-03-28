@@ -23,21 +23,33 @@ min-height: 100%;
      position: absolute;
      top: 20px;
      .user_imag {
-       height: 150px;
-       width: 150px;
        background-color: white;
+       padding-left: 5px;
        padding-top: 10px;
+       border-radius: 50%
      }
-     .user_edit_btn {
+     .user_imag img {
+      border-radius: 50%;
+      border: solid black;
+      border-width:thin ;
+     }
+      .follows{
+        width: 136px;
+        height: 40px;
+      }
+      
+      .user_edit_btn {
        height: 32px;
        width: 134px;
-       background-color: white;
+       background-color:skyblue;
        margin: 18px auto 0 auto;
        text-decoration: none;
+       line-height: 32px;
      }
      .user_edit_btn a {
       text-decoration: none;
-      color: black;
+      color: white;
+      margin-left: 10px;
      }
     }
     .user_main {
@@ -139,7 +151,14 @@ min-height: 100%;
      .main_contents_folow:hover {
       opacity: 0.8;
      }
-      
+     .user_imag {
+       padding-left: 10px;
+     }
+     .user_imag img {
+      border-radius: 50%;
+      border: solid black;
+      border-width:thin ;
+     }
       
     }
     }

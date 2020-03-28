@@ -1,20 +1,25 @@
 .post
-  = form_for(@post,local: true) do |f|
-    .field
-      .field-label
-        = f.label :"画像は絶対載せてください"
-      .field-input
-        = f.file_field :image
-    .field
-      .field-label
-        = f.label :"コーディネート詳細"
-      .field-input
-        = f.text_area :text, size: "45x5",placeholder: "例)この前暇やったから撮り置きしてたコーデ載せまーす( ^ω^ )皆さん元気ですか？私は元気ですよ( ´ ▽ ` )今日も張り切っていきましょう！！"
-    .field
-      .field-label
-        = f.label :"タグをいっぱい書いてください" 
-      .field-input
-        = f.text_area :tag_list,size: "45x5"
+  .header
+    = render partial: "header"
+  .post_form
+    = form_for(@post,local: true) do |f|
+      .field
+        .field-label
+          = f.label :"画像は絶対載せてください※"
+        .field-input
+          = f.label :image  do
+            = icon('fas', 'image', class: 'messege_image fa-7x fa-spin')
+            = f.file_field :image, class: 'input_box__image_file'
+      .field
+        .field-label
+          = f.label :"コーディネート詳細"
+        .field-input
+          = f.text_area :text, size: "45x5",placeholder: "例)コーデ載せまーす( ^ω^ )皆さん元気ですか？私は元気ですよ( ´ ▽ ` )今日も張り切っていきましょう！！"
+      .field
+        .field-label
+          = f.label :"カンマで区切ってタグをいっぱい書いてください" 
+        .field-input
+          = f.text_area :tag_list,size: "45x5",placeholder:"例）夏,海,コーデ,ストリートファッション"
 
-      .actions
-      = f.submit "投稿する", class: 'btn'
+        .actions
+        = f.submit "投稿する", class: 'btn'
