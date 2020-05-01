@@ -14,8 +14,7 @@
       .user_post_delet
         = link_to "/posts/#{@post.id}", method: :delete do
           = icon('fa', 'trash-alt' , class: "user_name__btn--icon")
-    .item-button-container
-      .item-button-container__left
+      .like-button
         = render partial: "likes/like", locals: { post: @post, posts: @posts, likes: @likes, like: @like}
   .content_info
     .content_info_user_post
@@ -37,7 +36,7 @@
               .field
                 .field-label 
                 .field-input
-                  = f.text_area :text,size: "100x5", placeholder: "コメントする"
+                  = f.text_area :text,size: "100x5", placeholder: "コメントする",class:"comment_fild_form"
                 .actions
                   = f.submit "コメントする", class: 'btn'
         .content_info_user_post_comment_list

@@ -16,7 +16,6 @@ class PostsController < ApplicationController
     if params[:tag_name]
       @posts = Post.tagged_with("#{params[:tag_name]}")
     end
-    # @users = user.select ("url")
     end
 
   def show

@@ -57,22 +57,10 @@
       text-decoration: none;
     }
     .header_contents_btn_seach_form {
-     width: 300px;
-     height: 30px;
-     background-color: white;
-     position: fixed;
-     top: 20px;
-     position: absolute;
-     .header_contents_btn_seach_form form {
-       height: 40px;
-     }
-     .text {
-       width: 300px;
-       position: relative;
-       bottom: 20px;
-       height: 40px;
-     }
-    }
-    
+      .search-input {
+        height: 30px;
+        width: 300px;
+   } 
   }
-} 
+ }
+}

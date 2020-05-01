@@ -2,7 +2,7 @@
   .header_contents
     .header_contents_btn_seach_form
       = form_tag( search_posts_path, method: :get )  do
-        = text_field_tag :keyword, params[ :keyword], { placeholder: "投稿を検索する", class: "text" }
+        = text_field_tag :keyword, params[ :keyword], { placeholder: "投稿を検索する", class: "search-input" }
     .header_contents_btn_app_name
       = link_to "USED", root_path 
     .header_contents_btn_rigt_btn
@@ -12,3 +12,4 @@
       - else
         = link_to "ログイン", new_user_session_path, class: "header_contents_btn_login_user" 
         = link_to "新規登録", new_user_registration_path, class: "header_contents_btn_new_user" 
+

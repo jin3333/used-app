@@ -5,7 +5,9 @@
     = form_for(@post,local: true) do |f|
       .field
         .field-label
-          = f.label :"画像は絶対載せてください※"
+        #image-box-1
+          .item-num-0#image-box__container
+          = f.label :"画像は絶対載せてください"
         .field-input
           = f.label :image  do
             = icon('fas', 'image', class: 'messege_image fa-7x fa-spin')

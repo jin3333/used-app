@@ -1,14 +1,11 @@
 .user_contents
   .main_contents_user_image
     = link_to post_path(post.id) do
-      = image_tag post.image 
+      = image_tag post.image,:size =>'230x320'
   .main_contents_user_info
     .user_imag
       = link_to user_path(post.user.id) do
         = image_tag post.user.image_name, :size =>'40x40'
     .main_contents_user_name
       = link_to post.user.name, user_path(post.user.id)
-    .main_contents_folow
-      = render "relationships/follow_button", user: @user
     .main_contents_likes
-  
