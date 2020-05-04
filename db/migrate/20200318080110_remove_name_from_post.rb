@@ -3,6 +3,3 @@ class RemoveNameFromPost < ActiveRecord::Migration[5.0]
     remove_column :posts, :name, :string
   end
 end
-
-
-rails generate migration AddusersTo url:text 
