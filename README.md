@@ -50,16 +50,8 @@
 - has_many   :posts_genre
 
 
-## genreテーブル
-|------|----|-------|
-|name|string|null: false|
-### Association
-- has_many :posts, through: :posts_genre
-- has_many :posts_genre
-- has_many :posts
-
-
 ## itemsテーブル
+|Column|Type|Options|
 |------|----|-------|
 |name|string|null: false|
 |price|integer|null: false|
@@ -71,6 +63,7 @@
 - belongs_to :post
 
 ## commentsテーブル
+|Column|Type|Options|
 |------|----|-------|
 |text|text|null: false|
 |user_id|integer|null: false, foreign_key: true|
