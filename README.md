@@ -14,6 +14,11 @@
   https://i.gyazo.com/485e56811857e52af5f3d7a3e78205f4.gif
 # 実装予定の内容
   商品の出品、購入機能です。まだサービスの大元のフリマ要素を実装できていないので実装予定です。
+# 本番環境のURLとテストアカウント
+　URL:http://54.250.62.142/
+  アカウント
+  email: a@a.com
+  Password: test1111
 # DB設計
 ## posts_genreテーブル
 |Column|Type|Options|
