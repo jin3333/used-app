@@ -22,6 +22,25 @@
           = f.label :"カンマで区切ってタグをいっぱい書いてください" 
         .field-input
           = f.text_area :tag_list,size: "45x5",placeholder:"例）夏,海,コーデ,ストリートファッション"
+      .field
+        .field-label
+        #image-box-1
+          .item-num-0#image-box__container
+          = f.label :"商品の画像を選択して下さい"
+        .field-input
+          = f.label :image  do
+            = icon('fas', 'image', class: 'messege_image fa-7x fa-spin')
+            = f.file_field :image, class: 'input_box__image_file'
+      .field
+        .field-label
+          = f.label :"商品名"
+        .field-input
+          = f.text_field :name, class: 'used__name', placeholder: ' 40文字まで',size: "45x5"
+      .field
+        .field-label
+          = f.label :"商品の詳細"
+        .field-input
+          = f.text_area :text, size: "45x5"
 
-        .actions
-        = f.submit "投稿する", class: 'btn'
+      .actions
+      = f.submit "投稿する", class: 'btn'
