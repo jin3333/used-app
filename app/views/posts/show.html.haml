@@ -29,6 +29,55 @@
             .content_info_user_post_tag
               - @post.tag_list.each do |tag|
                 %span{class: "content_info_user_post_tags"}= tag
+      .product_fild
+        %h1 出品商品
+        .product_fild_name
+          %h2 商品名: 台湾にいって買ったやつ
+        .product_fild_text
+          %h3 jfiajiaj;jairjgianrijio;agjijafo;
+        .product_fild_info
+          .product_fild_info_image
+            = image_tag 'IMG_5675.JPG'
+          .product_fild_info_detil
+            %table
+              %tbody
+                %tr
+                  %th
+                    出品者
+                  %td
+                    = @post.user.name
+                %tr
+                  %th
+                    カテゴリー
+                  %td
+                    あ
+                    %br/
+                    あ
+                    %br/
+                    あ
+                %tr
+                  %th
+                    ブランド
+                  %td
+                    ぐち
+                %tr
+                  %th
+                    商品のサイズ
+                  %td
+                    M
+                %tr
+                  %th
+                    価格
+                  %td
+                    100円
+        .product_fild_sell
+          - if user_signed_in? && current_user.id == @post.user_id
+            .product_fild_sell_delete
+              = link_to "/posts/#{@post.id}", method: :delete do
+                %p　商品の削除
+          - else 
+            .product_fild_sell_buy
+              = link_to('#', {})
       .comment_fild
         .content_info_user_post_comment_fild
           -if current_user

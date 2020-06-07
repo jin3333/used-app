@@ -101,6 +101,78 @@
       margin-top: 10px;
     }
   }
+  .product_fild {
+    width: 1020px;
+   background-color: #f2f2f2;
+   padding-top: 30px;
+   border: 10px solid rgba(0,0,0,0.3);
+   border-width:thick ;
+   margin-bottom: 20px;
+   h1 {
+     text-align: center;
+     font-size: 40px;
+     font-weight: bold;
+     border-bottom:solid;
+     border-width: thin ;
+     margin: 0 auto;
+     width: 800px;
+   }
+   &_name {
+     margin-top: 20px;
+     h2 {
+       text-align: center;
+       font-size: 30px;
+     }
+   }
+   &_text {
+     margin-top: 20px;
+     h3 {
+      text-align: center;
+     }
+   }
+   
+   &_info {
+     margin-top: 20px;
+     margin-bottom: 20px;
+     display: flex;
+     &_image {
+       margin-left: 110px;
+       img {
+         height: 300px;
+         width: 300px;
+       }
+     }
+     &_detil {
+       margin-left: 40px;
+       table {
+        width: 100%;
+        border-collapse: collapse;
+        border: 1px solid black;
+        th {
+            background-color: #eee;
+            font-weight: 400;
+            padding: 8px;
+            border: 1px solid #dedede;
+            font-size: 14px;
+            text-align: center;
+        }
+        td {
+          width: 400px;
+          padding: 15px 15px;
+          border: 1px solid #dedede;
+          font-size: 14px;
+        }
+       }
+       
+     }
+   }
+   &_sell {
+     &_delete {
+  
+    }   
+    }
+   }
+  
   .comment_fild {
    width: 1020px;
    background-color: #f2f2f2;
