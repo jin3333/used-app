@@ -73,11 +73,12 @@
         .product_fild_sell
           - if user_signed_in? && current_user.id == @post.user_id
             .product_fild_sell_delete
-              = link_to "/posts/#{@post.id}", method: :delete do
-                %p　商品の削除
+              = link_to "/posts/#{@post.id}", method: :delete, class:"" do
+                %p 商品の削除
           - else 
             .product_fild_sell_buy
-              = link_to('#', {})
+              = link_to('', {}) do
+                %p 商品の購入
       .comment_fild
         .content_info_user_post_comment_fild
           -if current_user
