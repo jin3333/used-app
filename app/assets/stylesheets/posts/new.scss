@@ -1,6 +1,13 @@
 .post {
   width: 100vw;
 }
+.post_name {
+  padding-top: 50px;
+  h1 {
+    font-size: 30px;
+    font-weight: bold;
+  }
+}
 .post_form {
   width: 800px;
   margin: 0 auto;
@@ -47,5 +54,3 @@
     background    : #ffffff;     
   }
   }
-
-

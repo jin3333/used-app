@@ -3,11 +3,13 @@
     = render partial: "header"
   .post_form
     = form_for(@post,local: true) do |f|
+      .post_name
+        %h1
+          ファッション投稿
       .field
         .field-label
-        #image-box-1
+          = f.label :"コーディネート画像"
           .item-num-0#image-box__container
-          = f.label :"画像は絶対載せてください"
         .field-input
           = f.label :image  do
             = icon('fas', 'image', class: 'messege_image fa-7x fa-spin')
@@ -22,11 +24,13 @@
           = f.label :"カンマで区切ってタグをいっぱい書いてください" 
         .field-input
           = f.text_area :tag_list,size: "45x5",placeholder:"例）夏,海,コーデ,ストリートファッション"
+      .post_name
+        %h1
+          商品出品
       .field
         .field-label
-        #image-box-1
+          = f.label :"商品画像"
           .item-num-0#image-box__container
-          = f.label :"商品の画像を選択して下さい"
         .field-input
           = f.label :image  do
             = icon('fas', 'image', class: 'messege_image fa-7x fa-spin')
@@ -41,6 +45,16 @@
           = f.label :"商品の詳細"
         .field-input
           = f.text_area :clothesinfo, size: "45x5"
-
+      .field
+        .field-label
+          = f.label :"ブランド"
+        .field-input
+          = f.text_field :brand, class: 'used__name', placeholder: ' apple',size: "45x5"
+      .field
+        .field-label
+          = f.label :"価格"
+        .field-input
+          = f.number_field  :price, class: 'used__name', placeholder: ' 1000'
+          円
       .actions
       = f.submit "投稿する", class: 'btn'

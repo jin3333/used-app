@@ -173,7 +173,7 @@
       background: red;
       border: 1px solid #3CCACE;
       color: #fff;
-      width: 60%;
+      width: 50%;
       font-size: 18px;
       border-radius: 100px;
       margin-left: 120px;
@@ -190,10 +190,10 @@
     } 
     &_buy {
     line-height: 48px;
-    background: red;
+    background: #3CCACE;
     border: 1px solid #3CCACE;
     color: #fff;
-    width: 60%;
+    width: 50%;
     font-size: 18px;
     border-radius: 100px;
     margin-left: 120px;
@@ -204,6 +204,9 @@
         } 
       } 
     }
+   }
+   .product_delete {
+     text-decoration: none;
    }
   
   .comment_fild {

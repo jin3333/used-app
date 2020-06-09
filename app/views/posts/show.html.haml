@@ -32,9 +32,11 @@
       .product_fild
         %h1 出品商品
         .product_fild_name
-          %h2 商品名: 台湾にいって買ったやつ
+          %h2 
+            = @post.name
         .product_fild_text
-          %h3 jfiajiaj;jairjgianrijio;agjijafo;
+          %h3
+            = simple_format(@post.clothesinfo)
         .product_fild_info
           .product_fild_info_image
             = image_tag 'IMG_5675.JPG'
@@ -59,7 +61,7 @@
                   %th
                     ブランド
                   %td
-                    ぐち
+                    = @post.brand
                 %tr
                   %th
                     商品のサイズ
@@ -69,11 +71,12 @@
                   %th
                     価格
                   %td
-                    100円
+                    = @post.price
+                    円
         .product_fild_sell
           - if user_signed_in? && current_user.id == @post.user_id
             .product_fild_sell_delete
-              = link_to "/posts/#{@post.id}", method: :delete, class:"" do
+              = link_to "/posts/#{@post.id}", method: :delete, class:"product_delete" do
                 %p 商品の削除
           - else 
             .product_fild_sell_buy
