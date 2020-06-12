@@ -39,7 +39,7 @@
             = simple_format(@post.clothesinfo)
         .product_fild_info
           .product_fild_info_image
-            = image_tag 'IMG_5675.JPG'
+            = image_tag @post.itemimag
           .product_fild_info_detil
             %table
               %tbody
@@ -77,7 +77,7 @@
           - if user_signed_in? && current_user.id == @post.user_id
             .product_fild_sell_delete
               = link_to "/posts/#{@post.id}", method: :delete, class:"product_delete" do
-                %p 商品の削除
+                %p 投稿の削除
           - else 
             .product_fild_sell_buy
               = link_to('', {}) do

@@ -1,10 +1,12 @@
 class Post < ApplicationRecord
   mount_uploader :image, ImageUploader
+  mount_uploader :itemimag, ImageUploader
 
   belongs_to :user
   has_many :comments
   has_many :likes, dependent: :destroy
   validates :image, presence: true
+  validates :itemimag, presence: true
 
   def self.search(search)
     if search
