@@ -42,6 +42,8 @@ GEM
       activerecord (>= 5.0, < 6.1)
     airbrussh (1.4.0)
       sshkit (>= 1.6.1, != 1.7.0)
+    ancestry (3.0.7)
+      activerecord (>= 3.2.0)
     arel (7.1.4)
     bcrypt (3.1.13)
     bindex (0.8.1)
@@ -246,6 +248,7 @@ PLATFORMS
 
 DEPENDENCIES
   acts-as-taggable-on (~> 6.0)
+  ancestry
   byebug
   capistrano
   capistrano-bundler
