@@ -8,6 +8,8 @@ class Post < ApplicationRecord
   validates :image, presence: true
   validates :itemimag, presence: true
 
+  belongs_to :category
+
   def self.search(search)
     if search
       Post.where('text LIKE(?)', "%#{search}%")

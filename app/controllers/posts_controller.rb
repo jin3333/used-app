@@ -16,6 +16,7 @@ class PostsController < ApplicationController
     if params[:tag_name]
       @posts = Post.tagged_with("#{params[:tag_name]}")
     end
+    @parents = Category.all.order("id ASC").limit(13)
     end
 
   def show
