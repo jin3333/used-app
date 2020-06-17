@@ -52,11 +52,11 @@
                   %th
                     カテゴリー
                   %td
-                    あ
+                    = @post.category.parent.parent.name
                     %br/
-                    あ
+                    = @post.category.parent.name
                     %br/
-                    あ
+                    = @post.category.name
                 %tr
                   %th
                     ブランド

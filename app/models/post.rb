@@ -9,6 +9,7 @@ class Post < ApplicationRecord
   validates :itemimag, presence: true
 
   belongs_to :category
+  validates :category_id, presence: true
 
   def self.search(search)
     if search

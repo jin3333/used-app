@@ -43,9 +43,18 @@ class PostsController < ApplicationController
     post.destroy
   end
 
+  def category_children
+    @category_children = Category.find("#{params[:parent_id]}").children
+  end
+
+  def category_grandchildren
+    @category_grandchildren = Category.find("#{params[:child_id]}").children
+  end
+
   private
 
  def post_params
-  params.require(:post).permit(:text, :image, :tag_list, :clothesinfo, :name, :brand, :price,:itemimag).merge(user_id: current_user.id )
+  params.require(:post).permit(:text, :image, :tag_list, :clothesinfo, :name, :brand, :price, :itemimag, :category_id,).merge(user_id: current_user.id )
  end
+
 end
